@@ -27,6 +27,12 @@
     return self;
 }
 
+// 设置label可以成为第一响应者
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+
 // 设置长按事件
 - (void)setUp {
     /* 你可以在这里添加一些代码，比如字体、居中、夜间模式等 */
@@ -47,12 +53,6 @@
     [menu setTargetRect:self.bounds inView:self];
     [menu setMenuVisible:YES animated:YES];
 }
-
-// 设置label可以成为第一响应者
-- (BOOL)canBecomeFirstResponder {
-    return YES;
-}
-
 
 // 设置label能够执行那些具体操作
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
